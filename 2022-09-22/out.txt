@@ -1,0 +1,57 @@
+   Compiling ulv2 v0.1.0 (/home/max/src/ul/services/ulv2)
+time:   0.001; rss:   43MB ->   47MB (   +4MB)	parse_crate
+time:   0.171; rss:   49MB ->  244MB ( +194MB)	expand_crate
+time:   0.172; rss:   49MB ->  244MB ( +194MB)	macro_expand_crate
+time:   0.001; rss:  244MB ->  244MB (   +1MB)	finalize_imports
+time:   0.023; rss:  244MB ->  269MB (  +24MB)	late_resolve_crate
+time:   0.002; rss:  269MB ->  270MB (   +1MB)	resolve_check_unused
+time:   0.027; rss:  244MB ->  270MB (  +27MB)	resolve_crate
+time:   0.205; rss:   47MB ->  270MB ( +223MB)	configure_and_expand
+time:   0.041; rss:  270MB ->  282MB (  +12MB)	looking_for_entry_point
+time:   0.051; rss:  270MB ->  285MB (  +15MB)	misc_checking_1
+time:   0.007; rss:  285MB ->  289MB (   +4MB)	type_collecting
+time:   0.073; rss:  289MB ->  488MB ( +200MB)	coherence_checking
+time:   0.016; rss:  488MB ->  498MB (   +9MB)	wf_checking
+time:   5.707; rss:  498MB ->  803MB ( +305MB)	item_types_checking
+time:   0.094; rss:  803MB ->  811MB (   +8MB)	item_bodies_checking
+time:   5.899; rss:  285MB ->  811MB ( +526MB)	type_check_crate
+time:   0.008; rss:  811MB ->  811MB (   +0MB)	match_checking
+time:   0.007; rss:  811MB ->  811MB (   +0MB)	liveness_checking
+time:   0.016; rss:  811MB ->  811MB (   +0MB)	misc_checking_2
+time:   0.125; rss:  811MB ->  815MB (   +3MB)	MIR_borrow_checking
+time:   0.022; rss:  817MB ->  821MB (   +4MB)	module_lints
+time:   0.026; rss:  817MB ->  821MB (   +4MB)	lint_checking
+time:   0.019; rss:  821MB ->  821MB (   +0MB)	privacy_checking_modules
+time:   0.062; rss:  815MB ->  821MB (   +7MB)	misc_checking_3
+time:   0.002; rss:  821MB ->  822MB (   +0MB)	monomorphization_collector_root_collections
+time:  25.178; rss:  822MB -> 1491MB ( +669MB)	monomorphization_collector_graph_walk
+time:   0.525; rss: 1491MB -> 1565MB (  +74MB)	partition_and_assert_distinct_symbols
+time:   0.000; rss: 1546MB -> 1549MB (   +3MB)	write_allocator_module
+time:   9.509; rss: 1549MB -> 2832MB (+1283MB)	codegen_to_LLVM_IR
+time:  35.220; rss:  821MB -> 2832MB (+2011MB)	codegen_crate
+time:   0.104; rss: 2838MB -> 2127MB ( -711MB)	free_global_ctxt
+time:   0.436; rss:  967MB -> 1536MB ( +569MB)	LLVM_lto_optimize(ulv2.aa2bf1b1-cgu.0)
+time:   2.122; rss: 1430MB -> 2175MB ( +746MB)	LLVM_lto_optimize(ulv2.aa2bf1b1-cgu.11)
+time:   2.262; rss: 1437MB -> 2159MB ( +722MB)	LLVM_lto_optimize(ulv2.aa2bf1b1-cgu.1)
+time:   2.213; rss: 1557MB -> 2169MB ( +612MB)	LLVM_lto_optimize(ulv2.aa2bf1b1-cgu.7)
+time:   2.454; rss: 1576MB -> 2170MB ( +593MB)	LLVM_lto_optimize(ulv2.aa2bf1b1-cgu.14)
+time:   2.896; rss: 1572MB -> 2232MB ( +660MB)	LLVM_lto_optimize(ulv2.aa2bf1b1-cgu.8)
+time:   3.090; rss: 1582MB -> 2245MB ( +664MB)	LLVM_lto_optimize(ulv2.aa2bf1b1-cgu.12)
+time:   3.574; rss: 1585MB -> 2279MB ( +694MB)	LLVM_lto_optimize(ulv2.aa2bf1b1-cgu.9)
+time:   3.899; rss: 1584MB -> 2079MB ( +495MB)	LLVM_lto_optimize(ulv2.aa2bf1b1-cgu.13)
+time:   3.966; rss: 1632MB -> 2095MB ( +464MB)	LLVM_lto_optimize(ulv2.aa2bf1b1-cgu.4)
+time:   4.009; rss: 1597MB -> 2097MB ( +500MB)	LLVM_lto_optimize(ulv2.aa2bf1b1-cgu.3)
+time:   4.159; rss: 1667MB -> 2024MB ( +357MB)	LLVM_lto_optimize(ulv2.aa2bf1b1-cgu.6)
+time:   4.286; rss: 1631MB -> 2033MB ( +403MB)	LLVM_lto_optimize(ulv2.aa2bf1b1-cgu.15)
+time:   4.376; rss: 1632MB -> 2038MB ( +406MB)	LLVM_lto_optimize(ulv2.aa2bf1b1-cgu.2)
+time:   4.534; rss: 1671MB -> 2045MB ( +374MB)	LLVM_lto_optimize(ulv2.aa2bf1b1-cgu.5)
+time:  13.032; rss: 2020MB ->  908MB (-1112MB)	LLVM_lto_optimize(ulv2.aa2bf1b1-cgu.10)
+time:  48.018; rss: 1876MB ->  765MB (-1111MB)	LLVM_passes(crate)
+time:   0.002; rss:  423MB ->  404MB (  -19MB)	join_worker_thread
+time:  39.683; rss: 2127MB ->  404MB (-1723MB)	finish_ongoing_codegen
+time:   0.643; rss:  404MB ->  402MB (   -2MB)	run_linker
+time:   0.649; rss:  404MB ->  402MB (   -2MB)	link_binary
+time:   0.649; rss:  404MB ->  402MB (   -2MB)	link_crate
+time:  40.332; rss: 2127MB ->  402MB (-1724MB)	link
+time:  82.069; rss:   32MB ->  209MB ( +177MB)	total
+    Finished release [optimized] target(s) in 1m 22s

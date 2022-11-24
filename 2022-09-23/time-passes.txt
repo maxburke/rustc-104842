@@ -1,0 +1,60 @@
+$ touch src/main.cpp && cargo rustc --release -- -Zself-profile -Ztime-passes 2>&1 | tee out.txt
+   Compiling ulv2 v0.1.0 (/home/max/src/ul/services/ulv2)
+time:   0.002; rss:   43MB ->   48MB (   +4MB)  parse_crate
+time:   0.174; rss:   49MB ->  245MB ( +196MB)  expand_crate
+time:   0.174; rss:   49MB ->  245MB ( +196MB)  macro_expand_crate
+time:   0.001; rss:  245MB ->  246MB (   +1MB)  finalize_macro_resolutions
+time:   0.026; rss:  246MB ->  271MB (  +25MB)  late_resolve_crate
+time:   0.030; rss:  245MB ->  271MB (  +25MB)  resolve_crate
+time:   0.001; rss:  271MB ->  272MB (   +2MB)  complete_gated_feature_checking
+time:   0.211; rss:   48MB ->  272MB ( +225MB)  configure_and_expand
+time:   0.005; rss:  284MB ->  284MB (   +0MB)  drop_ast
+time:   0.041; rss:  272MB ->  284MB (  +12MB)  looking_for_entry_point
+time:   0.000; rss:  285MB ->  288MB (   +3MB)  unused_lib_feature_checking
+time:   0.052; rss:  272MB ->  288MB (  +16MB)  misc_checking_1
+time:   0.007; rss:  288MB ->  291MB (   +4MB)  type_collecting
+time:   0.075; rss:  291MB ->  491MB ( +199MB)  coherence_checking
+time:   0.016; rss:  491MB ->  500MB (   +9MB)  wf_checking
+time:   5.813; rss:  500MB ->  804MB ( +304MB)  item_types_checking
+time:   0.095; rss:  804MB ->  812MB (   +8MB)  item_bodies_checking
+time:   6.008; rss:  288MB ->  812MB ( +524MB)  type_check_crate
+time:   0.008; rss:  812MB ->  812MB (   +0MB)  match_checking
+time:   0.006; rss:  812MB ->  812MB (   +0MB)  liveness_checking
+time:   0.014; rss:  812MB ->  812MB (   +0MB)  misc_checking_2
+time:   0.126; rss:  812MB ->  817MB (   +5MB)  MIR_borrow_checking
+time:   0.022; rss:  820MB ->  824MB (   +4MB)  module_lints
+time:   0.026; rss:  820MB ->  824MB (   +4MB)  lint_checking
+time:   0.019; rss:  824MB ->  824MB (   +0MB)  privacy_checking_modules
+time:   0.063; rss:  817MB ->  824MB (   +7MB)  misc_checking_3
+time:   0.002; rss:  824MB ->  824MB (   +1MB)  monomorphization_collector_root_collections
+time: 934.053; rss:  824MB -> 1988MB (+1164MB)  monomorphization_collector_graph_walk
+time:   0.513; rss: 1988MB -> 2058MB (  +70MB)  partition_and_assert_distinct_symbols
+time:  72.226; rss: 2052MB -> 2877MB ( +824MB)  codegen_to_LLVM_IR
+time: 1006.801; rss:  824MB -> 2877MB (+2053MB) codegen_crate
+time:   0.110; rss: 2879MB -> 1897MB ( -983MB)  free_global_ctxt
+time:   0.430; rss:  768MB -> 1352MB ( +584MB)  LLVM_lto_optimize(ulv2.245fc439-cgu.0)
+time:   2.070; rss: 1303MB -> 2030MB ( +727MB)  LLVM_lto_optimize(ulv2.245fc439-cgu.11)
+time:   2.228; rss: 1343MB -> 2050MB ( +708MB)  LLVM_lto_optimize(ulv2.245fc439-cgu.1)
+time:   2.345; rss: 1407MB -> 2034MB ( +627MB)  LLVM_lto_optimize(ulv2.245fc439-cgu.7)
+time:   2.475; rss: 1383MB -> 2043MB ( +660MB)  LLVM_lto_optimize(ulv2.245fc439-cgu.14)
+time:   2.893; rss: 1452MB -> 2100MB ( +648MB)  LLVM_lto_optimize(ulv2.245fc439-cgu.8)
+time:   3.130; rss: 1438MB -> 2116MB ( +679MB)  LLVM_lto_optimize(ulv2.245fc439-cgu.12)
+time:   3.706; rss: 1466MB -> 2093MB ( +627MB)  LLVM_lto_optimize(ulv2.245fc439-cgu.9)
+time:   3.953; rss: 1494MB -> 2029MB ( +535MB)  LLVM_lto_optimize(ulv2.245fc439-cgu.13)
+time:   4.104; rss: 1447MB -> 1968MB ( +521MB)  LLVM_lto_optimize(ulv2.245fc439-cgu.3)
+time:   4.055; rss: 1494MB -> 1978MB ( +484MB)  LLVM_lto_optimize(ulv2.245fc439-cgu.4)
+time:   4.298; rss: 1583MB -> 1897MB ( +314MB)  LLVM_lto_optimize(ulv2.245fc439-cgu.6)
+time:   4.381; rss: 1492MB -> 1900MB ( +408MB)  LLVM_lto_optimize(ulv2.245fc439-cgu.15)
+time:   4.418; rss: 1492MB -> 1903MB ( +412MB)  LLVM_lto_optimize(ulv2.245fc439-cgu.2)
+time:   4.566; rss: 1569MB -> 1907MB ( +338MB)  LLVM_lto_optimize(ulv2.245fc439-cgu.5)
+time:  13.229; rss: 1877MB ->  778MB (-1098MB)  LLVM_lto_optimize(ulv2.245fc439-cgu.10)
+time: 105.696; rss: 2371MB ->  639MB (-1732MB)  LLVM_passes(crate)
+time:   0.001; rss:  300MB ->  283MB (  -16MB)  join_worker_thread
+time:  35.078; rss: 1897MB ->  283MB (-1613MB)  finish_ongoing_codegen
+time:   0.628; rss:  283MB ->  283MB (   +0MB)  run_linker
+time:   0.633; rss:  283MB ->  283MB (   +0MB)  link_binary
+time:   0.634; rss:  283MB ->  282MB (   -1MB)  link_crate
+time:  35.712; rss: 1897MB ->  282MB (-1615MB)  link
+time: 1049.141; rss:   32MB ->  207MB ( +175MB) total
+    Finished release [optimized] target(s) in 17m 29s
+
